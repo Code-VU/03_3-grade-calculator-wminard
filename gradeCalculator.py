@@ -5,7 +5,9 @@ def calculateGrade():
 
     try:
         grade = float(input("Enter score:"))
-        if grade >= 0.9:
+        if grade > 1:
+            print("Bad score")
+        elif grade >= 0.9:
             print("A")
         elif grade >= 0.8:
             print("B")
@@ -13,9 +15,11 @@ def calculateGrade():
             print("C")
         elif grade >= 0.6:
             print("D")
-        else:
+        elif grade >= 0:
             print("F")
-    except ValueError or grade < 0 or grade > 1:
+        else:
+            print("Bad score")
+    except ValueError:
         print("Bad score")
 
     # end assignment
